@@ -30,6 +30,14 @@ header{
 .swiper-pagination-bullet{
     background: #ffffff;
 }
+.d1{
+    width: 100%;
+    height: .99rem;
+    display: flex;
+    margin-top: .05rem;
+    margin-left: .19rem;
+    /* background: rebeccapurple; */
+}
 .content{
     padding:0 .2rem;
     padding-top: .05rem;
@@ -59,4 +67,24 @@ header{
 .text .price{
     color: #ED3A3A;
     margin-top: .22rem;
+}
+.d8{
+    width: 100%;
+    height: .07rem;
+    margin-bottom: .10rem;
+    background: #ccc;
+}
+.bottom{
+    width: 100%;
+    height: 1.07rem;
+    display: flex;
+    justify-content: space-around;
+}
+.d2{
+    width: 1.2rem;
+    text-align: center;
+}
+.d5{
+    margin-top:-.10rem;
+
 }
