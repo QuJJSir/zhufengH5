@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/11.css">
+</head>
+
+<body>
+    <!-- head 开始 header头部 footer底部 main主体
+    设计稿尺寸
+        phone5  320* 568 DPR：2.0 尺寸 640*1136
+        phone6  375* 667 DPR：2.0 尺寸 750*1334(最常用)
+        phone6p 414* 736 DPR：3.0 尺寸 1242*2208
+-->
+    <header>
+        <h1 class="logo">
+            <a href="#"></a>
+        </h1>
+        <div class="menu">
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+        </div>
+
+        <!--引入动态判断得样式  -->
+        <script type="text/javascript">
+            // 动态判断rem得大小 desw=640 设计稿得尺寸
+            // 一套设计稿  适配所有机型
+            function refreshRem() {
+                var desW = 750,
+                    winW = document.documentElement.clientWidth,
+                    ratio = winW / desW;
+                document.documentElement.style.fontSize = ratio * 100 + 'px';
+            }
+            refreshRem();
+            window.addEventListener('resize', refreshRem);
+        </script>
+    </header>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="image/banner1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="image/banner2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="image/banner3.jpg" alt=""></div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+
+    </div>
+    <script src="js/swiper.min.js"></script>
+
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            loop: true, // 循环模式选项
+
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            autoplay: {
+                delay: 2000,
+                // stopOnLastSlide: false,
+                disableOnInteraction: false,
+            },
+        })        
+    </script>
+
+    <main class="content">
+        <section class="item">
+            <div class="pic">
+                <img src="image/banner1.jpg" alt="">
+            </div>
+            <div class="text">
+                <p class="dec">Vue.js从理论精讲到项目实战课程</p>
+                <p class="price">￥599.00元</p>
+            </div>
+        </section>
+        <section class="item">
+            <div class="pic">
+                <img src="image/banner3.jpg" alt="">
+            </div>
+            <div class="text">
+                <p class="dec">Vue.js从理论精讲到项目实战课程</p>
+                <p class="price">￥599.00元</p>
+            </div>
+        </section>
+        <section class="item">
+            <div class="pic">
+                <img src="image/banner2.jpg" alt="">
+            </div>
+            <div class="text">
+                <p class="dec">Vue.js从理论精讲到项目实战课程</p>
+                <p class="price">￥599.00元</p>
+            </div>
+        </section>
+        <section class="item">
+            <div class="pic">
+                <img src="image/banner3.jpg" alt="">
+            </div>
+            <div class="text">
+                <p class="dec">Vue.js从理论精讲到项目实战课程</p>
+                <p class="price">￥599.00元</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
